@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vSeeBox Channel Search | vseeboxchannels.com</title>
+  <meta name="description" content="Search and view over 1,700 live TV channels on vSeeBox. Find full list and see what channels have 7-day playback.">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        color: #787878;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #search-input {
+      width: 300px;
+      height: 30px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 5px;
+    }
+
+    .channel {
+      border: 1px solid #ccc;
+      margin: 5px auto;
+      padding: 10px;
+      max-width: 500px;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      flex: 0 0 calc(50% - 10px);
+      border: 1px solid lightgrey;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 5px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-item {
+        flex: 0 0 calc(25% - 10px); /* 4 items per row */
+      }
+    }
+
+    .shop-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 30px auto;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .shop-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>vSeeBox Channels</h1>
+  <h2>Search Channels on Heat Live</h2>
+
+  <!-- Search bar -->
+  <input type="text" id="search-input" placeholder="Search for a channel">
+
+  <!-- Search results -->
+  <div id="channelscontainer"></div>
+
+   <!-- Button back to shop -->
+  <a href="https://vseetv.shop" class="shop-btn">👉 Claim Best vSeeBox Pricing</a>
+
+  <!-- Grid of all channels -->
+  <div class="grid-container" id="grid"></div>
+
+  <!-- Button back to shop -->
+  <a href="https://vseetv.shop" class="shop-btn">👉 Shop vSeeBox Now</a>
+
+  <!-- Load channel data -->
+  <script src="Channel-List.js"></script>
+
+  <!-- Search + display logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchInput = document.getElementById('search-input');
+      const channelContainer = document.getElementById('channelscontainer');
+      const grid = document.getElementById('grid');
+
+      // Function to populate grid
+      function populateGrid(channelsData) {
+        grid.innerHTML = '';
+        channelsData.forEach(channel => {
+          const item = document.createElement('div');
+          item.className = 'grid-item';
+          let playbackText = channel.playback ? '<div>(7-Day Playback)</div>' : '';
+          item.innerHTML = `Channel ${channel.number}: <strong>${channel.name}</strong><br>${playbackText}`;
+          grid.appendChild(item);
+        });
+      }
+
+      // Initial load
+      if (window.channels && Array.isArray(window.channels)) {
+        populateGrid(window.channels);
+      } else {
+        grid.innerHTML = '<p>Channel data loading...</p>';
+      }
+
+      // Search functionality
+      searchInput.addEventListener('keyup', function(event) {
+        const input = searchInput.value.toLowerCase();
+        channelContainer.innerHTML = '';
+        if (input === '') {
+          channelContainer.innerHTML = '';
+        } else if (window.channels && Array.isArray(window.channels)) {
+          for (let i = 0; i < window.channels.length; i++) {
+            if (window.channels[i].name.toLowerCase().includes(input)) {
+              const channelElement = `
+                <div class="channel">
+                  <div class="channel-number">${window.channels[i].number} ${window.channels[i].name}</div>
+                </div>
+              `;
+              channelContainer.innerHTML += channelElement;
+            }
+          }
+        } else {
+          channelContainer.innerHTML = '<p>Channel data unavailable. Please try again later.</p>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
