@@ -9,6 +9,12 @@
   <meta name="google-site-verification" content="BwkvzkgfZfOrFGTe60hZTBRaJTSgVQJPaSBC9hftvqw" />
   <link rel="canonical" href="https://vseeboxchannels.com/">
 
+  <!-- ✅ Favicon Setup -->
+  <link rel="icon" type="image/png" href="images/vseebox-icon.png">
+  <link rel="shortcut icon" href="images/vseebox-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/vseebox-icon.png">
+  <meta name="theme-color" content="#000000">
+
   <!-- ✅ Open Graph tags for SEO and social sharing -->
   <meta property="og:title" content="vSeeBox Channels | Official Full List & Channel Search">
   <meta property="og:description" content="Search and browse the official 2025 vSeeBox channel list. Find supported channels, including 7-day playback options on the vSeeBox device. Live TV, sports, regional locals, and more">
@@ -225,6 +231,67 @@
     .back-to-search:hover { text-decoration:underline; }
     .back-to-search:focus { text-decoration:underline; outline: 2px dotted #007bff; outline-offset:2px; }
 
+    /* Guides Section */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    } 
+
+    .guide-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .guide-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .guide-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .guide-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007bff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .guide-link:hover {
+      text-decoration: underline;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      background-color: #e63946; /* red accent */
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+    }
+
+
 
   </style>
 </head>
@@ -248,7 +315,9 @@
   </p>
 
   <a href="https://vseetv.shop" class="shop-btn">Shop vSeeBox Here</a><br>
-  <a href="#faq" class="shop-btn">View Channel FAQ's</a>
+  <a href="#faq" class="shop-btn">View Channel FAQ's</a><br>
+  <a href="#guides" class="shop-btn">View Guides & Tips</a>
+
 
 
   <div class="grid-container" id="grid"></div>
@@ -381,6 +450,61 @@
     });
   });
 </script>
+
+<!-- ✅ START OF GUIDES & TIPS SECTION -->
+<section id="guides" style="margin-top:80px;">
+  <h2 style="text-align:center;font-size:26px;font-weight:bold;margin-bottom:15px; color: black;">
+    vSeeBox TV Guides & Tips
+  </h2>
+  <p style="text-align:center;max-width:700px;margin:0 auto 25px;color:#555;font-size:16px;">
+    Learn how to get the most out of your vSeeBox! Explore step-by-step guides, app tutorials, 
+    and tips for using and navigating Live TV, Heat Live, playback channels, and more.
+  </p>
+
+  <div class="guides-grid">
+    <div class="guide-card">
+      <h3>📺 How to Use Strat Heat Live  <span class="coming-soon">Coming Soon</span></h3>
+      <p>Learn how to access live sports, locals, and 7-day playback with Heat Live.</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+
+    <div class="guide-card">
+      <h3>How to Search Channels  <span class="coming-soon">Coming Soon</span></h3>
+      <p>See the multiple ways to search channels on Heat Live</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+
+    <div class="guide-card">
+      <h3>🌍 How to Watch All Live Sports  <span class="coming-soon">Coming Soon</span></h3>
+      <p>Learn how to find any sport you want to watch on vSeeBox</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+
+    <div class="guide-card">
+      <h3>How to Navigate TV Guides  <span class="coming-soon">Coming Soon</span></h3>
+      <p>Learn how to navigate the vSeeBox TV guide</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+
+    <div class="guide-card">
+      <h3>How Favorite Channels  <span class="coming-soon">Coming Soon</span></h3>
+      <p>Learn how to store channels in favorites list</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+
+    <div class="guide-card">
+      <h3>How to Make Changes For Display Options  <span class="coming-soon">Coming Soon</span></h3>
+      <p>Learn how to edit display options on Heat Live</p>
+      <a class="guide-link">Read Guide →</a>
+    </div>
+  </div>
+
+  <p style="text-align:center;margin-top:25px;">
+    <a href="#top" class="back-to-search">↑ Back to Channels</a>
+  </p>
+</section>
+<!-- ✅ END OF GUIDES & TIPS SECTION -->
+
 
 <p style="color: gray; font-size: 14px;">Last updated: October 2025</p>
 
