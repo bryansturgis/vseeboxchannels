@@ -361,6 +361,14 @@ body.dark-mode .bg-pink { background-color: rgba(236, 72, 153, 0.2); color: #f9a
 body.dark-mode .bg-rose { background-color: rgba(244, 63, 94, 0.2); color: #fda4af; }
 
 /* ================================
+   Main Summary Section
+   ================================ */
+.main-title {
+    font-weight: bold;
+}
+
+
+/* ================================
    Channel List Section
    ================================ */
 
@@ -375,6 +383,11 @@ body.dark-mode .bg-rose { background-color: rgba(244, 63, 94, 0.2); color: #fda4
     font-weight: 700;
     
     text-align: center;
+}
+
+.title-section h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .subtitle {
