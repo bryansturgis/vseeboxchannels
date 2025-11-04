@@ -169,7 +169,7 @@ section {
     width: 100%;
     z-index: auto;
     transition: background-color var(--transition-slow), border-color var(--transition-slow);
-    margin-bottom: 2rem; /* optional, adds breathing space before next section */
+    margin-bottom: 0rem; /* optional, adds breathing space before next section */
 }
 
 body.dark-mode .header {
@@ -371,6 +371,10 @@ body.dark-mode .bg-rose { background-color: rgba(244, 63, 94, 0.2); color: #fda4
 
 .title-section h1 {
     margin-bottom: 0.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    
+    text-align: center;
 }
 
 .subtitle {
@@ -888,8 +892,10 @@ body.dark-mode .v6-header {
 }
 
 .guides-header {
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    
 }
 
 .guides-title-row {
