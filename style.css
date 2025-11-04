@@ -365,6 +365,14 @@ body.dark-mode .bg-rose { background-color: rgba(244, 63, 94, 0.2); color: #fda4
    ================================ */
 .main-title {
     font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.summary-text {
+    text-align: center;
+    margin-top: 0px;
+
 }
 
 
