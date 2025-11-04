@@ -1158,8 +1158,8 @@ const FAQ_DATA = [
     },
     {
         id: 5,
-        question: 'Does any internet work with vSeeBox?',
-        answer: 'Yes, vSeeBox works with any stable internet connection — Wi-Fi, Ethernet, or hotspot. For smooth HD streaming, we recommend at least 15 Mbps, and 25 Mbps+ for 4K quality.'
+        question: 'What are the internet requirements for vSeeBox?',
+        answer: 'vSeeBox works with any stable connection (Wi-Fi, Ethernet, or hotspot). For optimal performance, we recommend a minimum of 15 Mbps for HD channels and 25 Mbps or higher for 4K streaming. Ethernet connections are always the most stable.'
     },
     {
         id: 6,
@@ -1178,13 +1178,13 @@ const FAQ_DATA = [
     },
     {
         id: 9,
-        question: 'What internet speed do I need for vSeeBox?',
-        answer: 'A minimum of 15 Mbps is recommended for HD streaming and 25 Mbps or higher for 4K. Ethernet connections offer the best performance.'
+        question: 'How do I search or filter the vSeeBox channel guide?',
+        answer: 'Use the search bar at the top of the guide to find channels instantly by name or number. You can also use the category filters located below the search bar to browse by content type (Sports, News, Regional Locals, etc.).'
     },
     {
         id: 10,
         question: 'Can I record on the vSeeBox?',
-        answer: 'Recording isn\'t currently supported on Heat Live, but 50+ playback channels let you rewatch content up to seven days after it airs — serving as a modern DVR replacement.'
+        answer: 'Local DVR recording isn\'t currently supported on Heat Live, but 50+ playback channels let you rewatch content up to seven days after it airs—this functions as a modern DVR replacement.'
     }
 ];
 
