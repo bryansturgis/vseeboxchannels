@@ -1375,7 +1375,7 @@ body.dark-mode .back-to-top-btn:hover {
     
     .search-input {
         padding: 1.25rem 6rem 1.25rem 2.5rem;
-        font-size: 0.875rem;
+        font-size: 16px;
     }
     
     .filters-scroll {
