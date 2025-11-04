@@ -1128,9 +1128,6 @@ const CATEGORY_FILTERS = [
     { id: 'network', label: 'Network TV', color: 'bg-purple', icon: '🖥️' },
     { id: 'regional', label: 'Regional Locals', color: 'bg-orange', icon: '📍' },
     { id: 'sports', label: 'Sports Networks', color: 'bg-red', icon: '🏆' },
-    { id: 'ppv', label: 'PPV Events', color: 'bg-yellow', icon: '💵' },
-    { id: 'nba', label: 'NBA', color: 'bg-indigo', icon: '🏀' },
-    { id: 'mlb', label: 'MLB', color: 'bg-pink', icon: '⚾' },
     { id: 'favorites', label: 'Favorites', color: 'bg-rose', icon: '❤️' }
 ];
 
@@ -1202,9 +1199,6 @@ function getCategoryTitle(category) {
         network: 'Network TV',
         regional: 'Regional Locals',
         sports: 'Sports Networks',
-        ppv: 'PPV Events',
-        nba: 'NBA',
-        mlb: 'MLB',
         favorites: 'Favorite Channels'
     };
     return titles[category] || 'All Channels';
@@ -1217,9 +1211,6 @@ function getCategoryCount(categoryId) {
     if (categoryId === 'network') return AppState.channels.filter(ch => ch.category === 'National Channels').length;
     if (categoryId === 'regional') return AppState.channels.filter(ch => ch.category === 'Local Channels').length;
     if (categoryId === 'sports') return AppState.channels.filter(ch => ch.category === 'Sports').length;
-    if (categoryId === 'nba') return AppState.channels.filter(ch => ch.category === 'Sports' && ch.name.toLowerCase().includes('nba')).length;
-    if (categoryId === 'mlb') return AppState.channels.filter(ch => ch.category === 'Sports' && ch.name.toLowerCase().includes('mlb')).length;
-    if (categoryId === 'ppv') return AppState.channels.filter(ch => ch.name.toLowerCase().includes('ppv') || ch.name.toLowerCase().includes('pay-per-view')).length;
     return 0;
 }
 
@@ -1295,20 +1286,8 @@ function filterChannels() {
         filtered = filtered.filter(channel => channel.category === 'Local Channels');
     } else if (AppState.selectedCategory === 'sports') {
         filtered = filtered.filter(channel => channel.category === 'Sports');
-    } else if (AppState.selectedCategory === 'nba') {
-        filtered = filtered.filter(channel => 
-            channel.category === 'Sports' && channel.name.toLowerCase().includes('nba')
-        );
-    } else if (AppState.selectedCategory === 'mlb') {
-        filtered = filtered.filter(channel => 
-            channel.category === 'Sports' && channel.name.toLowerCase().includes('mlb')
-        );
-    } else if (AppState.selectedCategory === 'ppv') {
-        filtered = filtered.filter(channel =>
-            channel.name.toLowerCase().includes('ppv') || 
-            channel.name.toLowerCase().includes('pay-per-view')
-        );
-    }
+    } 
+    
     
     AppState.filteredChannels = filtered;
     AppState.totalPages = Math.ceil(filtered.length / AppState.itemsPerPage);
