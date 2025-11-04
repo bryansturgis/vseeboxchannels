@@ -1382,6 +1382,10 @@ body.dark-mode .back-to-top-btn:hover {
         justify-content: flex-start;
         flex-wrap: nowrap;
     }
+
+    .shop-btn {
+        max-width: 180px;
+    }
 }
 
 /* ================================
