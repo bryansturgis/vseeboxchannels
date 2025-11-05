@@ -1139,7 +1139,7 @@ const FAQ_DATA = [
     {
         id: 1,
         question: 'What channels are available on vSeeBox?',
-        answer: 'vSeeBox supports over 1,000 live channels, including major sports, news, movies, regional locals, and international options. Use the search tool above or browse our full vSeeBox channels list 2025 for details. New channels are added periodically to keep your experience fresh.'
+        answer: 'vSeeBox supports over 1,000 live channels, including network tv, live sports, news, regional locals, premium, and international. Use the search tool above or browse our full vSeeBox channels list 2025 for details.'
     },
     {
         id: 2,
